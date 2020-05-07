@@ -40,6 +40,13 @@ const CartProvider: React.FC = ({ children }) => {
     loadProducts();
   }, []);
 
+  useEffect(() => {
+    async function saveProducts(): Promise<void> {
+      await AsyncStorage.setItem('products', JSON.stringify(products));
+    }
+
+    saveProducts();
+  }, [products]);
   const addToCart = useCallback(
     async product => {
       const newProducts = [...products];
@@ -50,7 +57,7 @@ const CartProvider: React.FC = ({ children }) => {
       } else {
         newProducts[findIndexP].quantity += 1;
       }
-      setProducts(newProducts);
+      setProducts([...newProducts]);
     },
     [products],
   );
@@ -66,9 +73,7 @@ const CartProvider: React.FC = ({ children }) => {
 
       newProducts[findIndexP].quantity += 1;
 
-      await AsyncStorage.setItem('products', JSON.stringify(newProducts));
-
-      setProducts(newProducts);
+      setProducts([...newProducts]);
     },
     [products],
   );
@@ -88,8 +93,7 @@ const CartProvider: React.FC = ({ children }) => {
         newProducts.splice(findIndexP, 1);
       }
 
-      await AsyncStorage.setItem('products', JSON.stringify(newProducts));
-      setProducts(newProducts);
+      setProducts([...newProducts]);
     },
     [products],
   );
