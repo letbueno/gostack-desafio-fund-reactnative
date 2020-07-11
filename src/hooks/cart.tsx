@@ -74,6 +74,10 @@ const CartProvider: React.FC = ({ children }) => {
       newProducts[findIndexP].quantity += 1;
 
       setProducts([...newProducts]);
+      await AsyncStorage.setItem(
+        '@GoMarketplace:cart',
+        JSON.stringify(products),
+      );
     },
     [products],
   );
@@ -94,7 +98,12 @@ const CartProvider: React.FC = ({ children }) => {
       }
 
       setProducts([...newProducts]);
+      await AsyncStorage.setItem(
+        '@GoMarketplace:cart',
+        JSON.stringify(products),
+      );
     },
+
     [products],
   );
 
