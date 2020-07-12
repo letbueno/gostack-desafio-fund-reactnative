@@ -1,7 +1,7 @@
 ![68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f676f6c64656e2d77696e642f626f6f7463616d702d676f737461636b2f6865616465722d6465736166696f732e706e67](https://user-images.githubusercontent.com/50913322/87230209-c2d41600-c384-11ea-9339-71a8deacfccc.png)
 
 
-<h1 align="center">:rocket: Desafio 06 do Nível 03 do Bootcamp GoStack 11.0 - Fundamentos do React Native :rocket:</h1>
+<h1 align="center">:rocket: Desafio 08 do Nível 03 do Bootcamp GoStack 11.0 - Fundamentos do React Native :rocket:</h1>
 
 A proposta deste desafio era testar os conhecimentos do módulo Fundamentos do React Native. Onde consistia em implementar front-end da aplicação fake API disponibilizada dentro do template, para realizar compras de produtos na aplicação GoMarketPlace.
 
